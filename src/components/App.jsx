@@ -25,7 +25,7 @@ function App() {
 
   return (
     <>
-     <Header />
+     <Header title="CodeSpan"/>
       <div className="pane top-pane">
         <Editor
           language="xml"
@@ -46,6 +46,7 @@ function App() {
           onChange={setJs}
         />
       </div>
+      <Header title="Output"/>
       <div className="pane">
         <iframe
           srcDoc={srcDoc}
