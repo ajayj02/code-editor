@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
-// eslint-disable-next-line react-refresh/only-export-components
-const PREFIX = 'code-editor-';
+const PREFIX = 'codepen-editor-';
 
 function useLocalStorage(key, initialValue) {
   const prefixedkey = PREFIX + key;
@@ -11,7 +10,7 @@ function useLocalStorage(key, initialValue) {
 
     if (jsonValue != null) return JSON.parse(jsonValue)
 
-    if (typeof initialValue === "function") {
+    if (typeof initialValue === 'function') {
       return initialValue()
     } else {
       return initialValue
